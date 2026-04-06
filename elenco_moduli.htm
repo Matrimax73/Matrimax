@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//IT"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Elenco moduli</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<noscript>
+<div align="center">
+  <h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#FF0000">
+    ATTENZIONE!<BR>Per visualizzare correttamente il contenuto della
+    pagina occorre abilitare JavaScript nel browser.<br>
+	
+  </font></h3><a href="attivare javascript.htm" target="_blank">Come faccio ad attivare JavaScript nel browser?</a><br><br>
+</div>
+</noscript>
+<script type="text/javascript">
+function parseGetVars()
+{
+  // creo una array
+  var args = new Array();
+  // individuo la query (cioè tutto quello che sta a destra del ?)
+  // per farlo uso il metodo substring della proprietà search
+  // dell'oggetto location
+  var query = window.location.search.substring(1);
+  // se c'è una querystring procedo alla sua analisi
+  if (query)
+  {
+    // divido la querystring in blocchi sulla base del carattere &
+    // (il carattere & è usato per concatenare i diversi parametri della URL)
+    var strList = query.split('&');
+    // faccio un ciclo per leggere i blocchi individuati nella querystring
+    for(str in strList)
+    {
+      // divido ogni blocco mediante il simbolo uguale
+      // (uguale è usato per l'assegnazione del valore)
+      var parts = strList[str].split('=');
+      // inserisco nella array args l'accoppiata nome = valore di ciascun
+      // parametro presente nella querystring
+      args[unescape(parts[0])] = unescape(parts[1]);
+    }
+  }
+  return args;
+}</script>
+
+<script type="text/javascript"><!--
+  var anteprima=window.location.search.substring(1);
+//--></script>
+<link href="style2.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div align="center" id="footer">  
+  <h1><strong>MATRIMAX 1.1 </strong></h1>
+Software di gestione della modulistica matrimoniale.</div>
+
+<hr size="1" noshade>
+
+<table width="100%"  border="0">
+  <tr>
+    <td>
+	 
+	  <div align="right">
+ <a href="javascript:history.back()"><img src="images/freccia_xs.jpg" width="24" height="24" hspace="2" vspace="2" align="absmiddle">indietro</a> |<a href="matrimax.htm"><img src="images/modulo.jpg" width="24" height="24" hspace="2" vspace="2" align="absmiddle">Nuova pratica</a> |<a href="moduli/" target="_blank"><img src="images/Adobe%20Acrobat%20Reader.gif" width="20" height="20" hspace="2" vspace="2" align="absmiddle">Moduli pdf</a> |<a href="documenti/" target="_blank"><img src="images/folder_clipboard_normal_thumb.png" width="20" height="20" hspace="2" vspace="2" align="absmiddle">Documenti utili</a> |  
+ <script language="JavaScript">
+<!--
+if (anteprima !=""){
+document.write("<a href=\"stampa.htm?"+anteprima+"\"><img src=\"images/icon-print.jpg\" width=\"20\" height=\"23\" hspace=\"2\" vspace=\"2\" align=\"absmiddle\">stampa</a>")
+
+}// else {
+//alert("Errore! Dati per anteprima non disponibili!")}
+//-->
+</script>      
+ </div>
+	  <fieldset>
+<legend> ELENCO MODULI NECESSARI</legend>
+ 
+ <br>
+<script language="JavaScript" type="text/javascript" src="moduli.js"></script>
+ <script language="JavaScript" type="text/javascript" src="controllo.js"></script>
+
+
+ </fieldset>
+
+<br>
+  
+<fieldset>
+<legend>Adempimenti e note</legend>
+  <label><script language="JavaScript" type="text/javascript" src="adempimenti.js"></script>
+  </label>
+  <br>
+  <br>
+
+</fieldset>  
+ 
+  
+  </tr>
+</table>
+<br>
+
+<hr size="1" noshade>
+<div align="center" id="lista">- Matrimax 1.1 - don Massimiliano Orfei &copy; 2009 </div>
+</body>
+</html>

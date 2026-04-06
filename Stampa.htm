@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<title>Matrimax 1.0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<noscript>
+<div align="center">
+  <h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#FF0000">
+    ATTENZIONE!<BR>Per visualizzare correttamente il contenuto della
+    pagina occorre abilitare JavaScript nel browser.<br>
+	
+  </font></h3><a href="attivare javascript.htm" target="_blank">Come faccio ad attivare JavaScript nel browser?</a><br><br>
+</div>
+</noscript>
+<script type="text/javascript">
+function stampa(){
+if (confirm("Stampare la pagina?")){
+print();
+history.back()
+}else{
+history.back()}
+}
+</script>
+
+<script type="text/javascript">
+function parseGetVars()
+{
+  // creo una array
+  var args = new Array();
+  // individuo la query (cioè tutto quello che sta a destra del ?)
+  // per farlo uso il metodo substring della proprietà search
+  // dell'oggetto location
+  var query = window.location.search.substring(1);
+  // se c'è una querystring procedo alla sua analisi
+  if (query)
+  {
+    // divido la querystring in blocchi sulla base del carattere &
+    // (il carattere & è usato per concatenare i diversi parametri della URL)
+    var strList = query.split('&');
+    // faccio un ciclo per leggere i blocchi individuati nella querystring
+    for(str in strList)
+    {
+      // divido ogni blocco mediante il simbolo uguale
+      // (uguale è usato per l'assegnazione del valore)
+      var parts = strList[str].split('=');
+      // inserisco nella array args l'accoppiata nome = valore di ciascun
+      // parametro presente nella querystring
+      args[unescape(parts[0])] = unescape(parts[1]);
+    }
+  }
+  return args;
+}</script>
+<link href="style2.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+a {
+	text-decoration: none;
+}
+-->
+</style>
+</head>
+
+<body onLoad="stampa()">
+<div align="center">
+  <h1><strong><a href="matrimax.htm">MATRIMAX</a> 1.1 </strong></h1>
+Software di gestione della modulistica matrimoniale.</div>
+<hr size="1" noshade>
+	  <fieldset>
+<legend> ELENCO MODULI NECESSARI</legend>
+ 
+ <br>
+<script language="JavaScript" type="text/javascript" src="moduli.js"></script>
+ </fieldset>
+
+<fieldset>
+<legend>Adempimenti e note</legend>
+  <label><script language="JavaScript" type="text/javascript" src="adempimenti.js"></script>
+  </label>
+</fieldset>  
+ 
+      <div align="right" id="ricerca">Data della pratica: 
+        <script language="JavaScript1.2">
+<!--
+var oggi = new Date();
+
+var G = oggi.getDate();
+var M = (oggi.getMonth() + 1);
+
+if (G < 10)
+{
+	var gg = "0" + oggi.getDate();
+}
+else
+{
+	var gg = oggi.getDate();
+}
+
+if (M < 10)
+{
+	var mm = "0" + (oggi.getMonth() + 1);
+}
+else
+{
+	var mm = (oggi.getMonth() + 1);
+}
+
+var aa = oggi.getFullYear();
+
+var data = gg + "/" + mm + "/" + aa;
+
+document.write(data);
+
+
+//-->
+        </script>
+      </div>
+<div align="center">- Matrimax 1.1 - don Massimiliano Orfei &copy; 2009 </div>
+</body>
+
+</html>
+

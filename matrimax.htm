@@ -3,9 +3,24 @@
 <html>
 <head>
 <title>Matrimax</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="style2.css" rel="stylesheet" type="text/css">
-<noscript>
+<style>
+        /* Stili per computer (Desktop) */
+        body { font-family: sans-serif; padding: 20px; }
+        .container { width: 80%; margin: auto; background: #f4f4f4; padding: 20px; }
+
+        /* Media Query per Smartphone (schermi fino a 600px) */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%;    /* Occupa tutto lo schermo */
+                padding: 10px;  /* Riduce i margini */
+                font-size: 18px; /* Aumenta il testo per leggibilità */
+            }
+        }
+</style>
+	<noscript>
 <div align="center">
   <h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#FF0000">
     ATTENZIONE!<BR>Per visualizzare correttamente il contenuto della
@@ -17,6 +32,7 @@
 </head>
 
 <body>
+	<div class="container">
 <div align="center">
   <div align="center" id="footer">
     <h1><strong>MATRIMAX 1.1 <a name="Top"></a></strong></h1>
@@ -278,5 +294,6 @@ No</label>
 </form>
 <hr size="1" noshade>
 <div align="center" id="lista">- Matrimax 1.1 - don Massimiliano Orfei &copy; 2009 </div>
+	</div>
 </body>
 </html>
